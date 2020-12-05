@@ -22,8 +22,9 @@
     display: table-cell;
     vertical-align: middle;
     user-select: none;
-    padding: 0;
+    padding: 0px 6px 0px 4px;
     margin: 0;
+    background-color: #14d23466
   }
 
   .navigation-item {
@@ -45,7 +46,7 @@
       line-height: 0.8em;
       color: #fff;
       background: palette($primary);
-      padding: 0.4rem 1rem 0.4rem 1.75rem;
+      padding: 0.5rem 1rem 0.2rem 2rem;
       margin-top: -0.25rem;
       border-radius: 1.25rem;
     }
@@ -58,9 +59,9 @@
     &::after {
       content: '';
       position: absolute;
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 50%;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 0% 100% 100% 0% / 0% 50% 50% 100%;
       border: 2px solid palette(gray);
       top: 0;
       left: 0;
@@ -70,9 +71,9 @@
       transition: all 150ms ease-out;
       background-color: $white;
     }
-
+    /* Mudar a cor da transparencia da bullet no hover */
     &:hover::after {
-      background: transparent;
+      background: $oc-green-9;
       border-color: #fff;
     }
   }

@@ -1,6 +1,7 @@
 <div class="navigation">
   <ul class="navigation-links">
-    {% for post in site.posts %}
+    {% assign index = site.posts | where: "category", "indice" %}
+    {% for post in index %}
     <li class="navigation-item">
       <a data-scroll href="#{{ post.url | remove: '/' }}">{{ post.title }}</a>
     </li>
