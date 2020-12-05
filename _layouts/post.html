@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<header>
+  {% include core/social.html %}
+</header>
+<article>
+  <div class="post -fixed -first">
+    <div class="post-header ctnr-golden">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+    <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}.jpg" srcset="{{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}.jpg 1000w, {{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}-large.jpg 2000w, {{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}-small.jpg 500w" sizes="(min-width: 768px) 50vw, 100vw">
+    <div class="ctnr-wide">
+      {{ content }}
+    </div>
+  </div>
+</article>
+
+{% include core/footer.html %}
