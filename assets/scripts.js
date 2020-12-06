@@ -1,3 +1,6 @@
+---
+exclude: true
+---
 "use strict";
 
 function _typeof(e) {

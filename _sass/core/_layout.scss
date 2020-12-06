@@ -29,8 +29,8 @@ $desktop: 64em !default; /*1024px*/
   z-index: 2;
 }
 
-.ctnr-wide,
-.ctnr-golden {
+.container-total,
+.container-principal {
   width: 100%;
   max-width: 50rem;
   padding-right: 2rem;
@@ -43,13 +43,13 @@ $desktop: 64em !default; /*1024px*/
     width: 50vw;
   }
 
-  .ctnr-wide {
+  .container-total {
     width: 100%;
     padding-right: 4rem;
     padding-left: 4rem;
   }
 
-  .ctnr-golden {
+  .container-principal {
     max-width: 56rem;
     width: 61.8%;
     min-width: 24rem;

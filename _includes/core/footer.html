@@ -1,26 +1,10 @@
 <footer class="footer">
-	<div class="ctnr-wide">
+	<div class="container-total">
+		{%comment%}
 		<div class="footer-navigation">
 			<div class="footer-links">
 				<h4 class="footer-title">Connor Bär</h4>
-				<nav>
-					<ul class="nav">
-						{% assign entries = site.pages | where: "lang", page.lang | sort: "order" %}
-						{% for entry in entries %}
-							{% unless entry.exclude == true %}
-								<li class="footer-link">
-									<a class="{% if page.url == entry.url %} nav-active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}" aria-label="{{ entry.title }}">{{ entry.title }}</a>
-								</li>
-							{% endunless %}
-						{% endfor %}
-						{% for entry in site.navigation %}
-							<li class="footer-link">
-								<a href="{{ entry[1] }}" aria-label="{{ entry[0] }}">{{ entry[0] }}</a>
-							</li>
-						{% endfor %}
-						</ul>
-						
-				</nav>
+				
 			</div>
 			<div class="footer-links">
 				<h4 class="footer-title">More Themes</h4>
@@ -34,6 +18,8 @@
 				</nav>
 			</div>
 		</div>
+		{%endcomment%}
+		
 		<h6 class="footer-text">© {{ site.time | date: '%Y' }} <a href="https://twitter.com/{{ site.author.twitter }}" aria-label="Follow {{ site.author.name }} on Twitter.">{{ site.author.name }}</a>. All rights reserved.</h6>
 	</div>
 </footer>
