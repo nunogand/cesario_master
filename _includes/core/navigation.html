@@ -1,7 +1,9 @@
 <div class="navigation">
   <ul class="navigation-links">
-    {% assign index = site.posts | where: "category", "indice" %}
-    {% for post in index %}
+    {% comment %}
+    {% assign index = paginator.posts | where: "category", "indice" %}
+    {% endcomment %}
+    {% for post in paginator.posts %}
     <li class="navigation-item">
       <a data-scroll href="#{{ post.url | remove: '/' }}">{{ post.title }}</a>
     </li>
