@@ -2,7 +2,7 @@
 	<div class="ctnr-wide">
 		<div class="footer-navigation">
 			<div class="footer-links">
-				<h4 class="footer-title">nunogand</h4>
+				<h4 class="footer-title">Connor Bär</h4>
 				<nav>
 					<ul class="nav">
 						{% assign entries = site.pages | where: "lang", page.lang | sort: "order" %}
@@ -27,12 +27,15 @@
 				<nav>
 					<ul class="nav">
 						<li class="footer-link">
-							<a href="https://nunogand.com" target="_blank" rel="noopener noreferrer">website</a>
+							<a href="https://connor-baer.github.io/summer" target="_blank" rel="noopener noreferrer">Summer</a>
 						</li>
+						
 					</ul>
 				</nav>
 			</div>
 		</div>
-		<h6 class="footer-text">© {{ site.time | date: '%Y' }} <a href="https://twitter.com/{{ site.author.twitter }}" aria-label="Follow {{ site.author.name }} on Twitter.">{{ site.author.name }}</a>. No rights reserved.</h6>
+		<h6 class="footer-text">© {{ site.time | date: '%Y' }} <a href="https://twitter.com/{{ site.author.twitter }}" aria-label="Follow {{ site.author.name }} on Twitter.">{{ site.author.name }}</a>. All rights reserved.</h6>
 	</div>
 </footer>
+<hr>
+{% include footer.html %}
