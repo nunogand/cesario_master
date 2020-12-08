@@ -43,6 +43,9 @@ compress_html:
 #dark_theme: false
 assets: '/assets'
 
+# Mudar o nome dos posts para remover a data
+permalink: /:title.html
+
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
 # The values here represent the defaults if nothing is set
