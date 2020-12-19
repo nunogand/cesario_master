@@ -4,6 +4,9 @@
   width: 100%;
   background-color: $white;
   border-top: 1px solid palette(gray, light);
+  h6{
+    font-style: normal;
+  }
 
   & p {
     font-family: $sans;
@@ -73,4 +76,19 @@
 
 .trail-navigation {
   display:inline;
+  a{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    margin: auto 5px;
+  }
+}
+
+.selected {
+    a {font-weight: bold;
+      border-bottom: 3px solid #2ecc71;
+  }
+  
 }

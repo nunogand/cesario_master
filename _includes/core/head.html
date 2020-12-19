@@ -25,14 +25,27 @@
     {% if page.title %} {{ page.title }} · {{ site.title }} {% else %} {{ site.title }} · {{ site.tagline }} {% endif %}
   </title>
 
-  <!-- CSS -->
-  {% if site.google_fonts %}
-    <link href="https://fonts.googleapis.com/css?family={% for font in site.google_fonts %}{{ font[0] | replace: ' ', '+' }}{% if font[1] %}:{% endif %}{{ font[1] | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}" rel="stylesheet">
-  {% endif %}
-  <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/styles{% if site.dark_theme %}-dark{% endif %}.css">
+  <!-- CSS Fonts (colocar igual ao css)-->
+  
+<!-- [1 Preemptively warm up the fonts’ origin] -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- [2 Initiate a high-priority, asynchronous fetch for the CSS file. Works in most modern browsers] -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" />
+
+<!-- [3 Initiate a low-priority, asynchronous fetch that gets applied to the page only after it’s arrived. Works in all browsers with JavaScript enabled] -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" media="print" onload="this.media='all'" />
+
+<!-- [4 In the unlikely event that a visitor has intentionally disabled JavaScript, fall back to the original method] -->
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" /> 
+</noscript>
+
+  <!-- Site CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/styles{% if site.dark_theme %}-dark{% endif %}.css">
 
   <!-- Icons -->
-  {% include core/icons.html %}
+  {% include core/favicons.html %}
 
   <!-- RSS -->
   {% feed_meta %} {% seo title=false %}

@@ -23,7 +23,7 @@
     width: 7rem;
     background-color: palette(gray, lighter);
     display: block;
-    margin: 1.75rem auto;
+    margin: 0.5rem auto;
     border-radius: 0.2rem;
   }
 
@@ -75,6 +75,7 @@ a.link {
   display: inline-block;
   color: palette(gray, darker);
   transition: color 0.15s ease-in-out;
+  font-size: 75%;
 
   &::before {
     content: '';

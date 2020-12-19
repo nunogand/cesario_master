@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dedicatoria
+title: Dedicatória
 image: capa
 category: indice
 ---
