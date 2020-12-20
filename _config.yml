@@ -23,16 +23,27 @@ email: nunogand@gmail.com
 description: O Livro de Cesário Verde é a edição póstuma da coletânea dos poemas do poeta português Cesário Verde, feita por seu amigo Silva Pinto em 1887. Numa edição de 200 exemplares, que não foi posta à venda, O Livro de Cesário Verde foi publicado por Silva Pinto e distribuído pelas pessoas que o editor e Jorge Verde melhor entenderam merecer a oferta. Correspondem, assim, a "parentes, amigos, administradores provados do ilustre poeta". O poeta é considerado um dos pioneiros da moderna poesia do Portugal do século XX. 
 tagline: O Livro de Cesário Verde
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cesarioverde.nunogand.com" # the base hostname & protocol for your site, e.g. https://example.com
 twitter_username: nunogand
 github_username: nunogand
+author: Cesário Verde
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-minifier
 
+# Defaults (seo)
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      seo:
+        type: CreativeWork
 
 # Dependencies
 markdown: kramdown
@@ -106,3 +117,10 @@ pagination:
   indexpage: 'index'
 
 ############################################################
+# Minifier
+jekyll-minifier:
+  exclude: 'atom.xml'
+  preserve_line_breaks: true       # Default: false
+
+sass:
+  style: compressed

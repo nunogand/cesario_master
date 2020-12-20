@@ -17,7 +17,13 @@ pagination:
       </div>
     
     </span>
-    <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}{{ site.assets }}/posts/{{post.image}}.jpg">
+
+{% picture  {{ site.baseurl }}{{ site.assets }}/posts/{{post.image}}.jpg --img class="post-image" --img alt="{{post.image}}" loading="lazy" style="z-index: {{ lengthID | minus: forloop.index }}"%}
+
+{% comment %}    
+    <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}{{ site.assets }}/posts/{{post.image}}.jpg" alt="{{post.image}}" loading="lazy">
+{% endcomment %}
+
     <div class="container-total">
     {{ post.content }}
     </div>

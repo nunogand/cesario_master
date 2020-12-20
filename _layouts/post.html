@@ -10,9 +10,11 @@ layout: default
     <div class="post-header container-principal">
       <h1 class="post-title">{{ page.title }}</h1>
     </div>
-    <img class="post-image" style="z-index: {{ lengthID | minus: forloop.index }}" src="{{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}.jpg">
-    <div class="container-total">
+
+    {% picture  {{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}.jpg --img class="post-image" --img alt="{{page.image}}" loading="lazy" style="z-index: {{ lengthID | minus: forloop.index }}" %}
+
       {{ content }}
+
     </div>
   </div>
 </article>

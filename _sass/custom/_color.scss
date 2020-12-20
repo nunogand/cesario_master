@@ -124,7 +124,7 @@ $_palettes: (
 // 3. palette() //
 
 // A simple function to retrieve a color from the palette.
-// Adapted from http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+// Adapted from https://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 @function palette($palette, $tone: 'base') {
   @return map-get(map-get($_palettes, $palette), $tone);
 }

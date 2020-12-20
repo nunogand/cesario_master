@@ -79,8 +79,8 @@
 [build.processing.images]
   compress = true
   
-#[[redirects]]
-#  from = "https://nunogand.netlify.app"
-#  to = "https://nunogand.com"
-#  status = 301
-#  force = true
+[[redirects]]
+  from = "https://cesario.netlify.app"
+  to = "https://cesarioverde.nunogand.com"
+  status = 301
+  force = true
