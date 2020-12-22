@@ -11,9 +11,9 @@ pagination:
     <span id="{{ post.url | remove: '/' }}">
       
       <div class="post-header container-principal">
-        <h1 class="post-title">
+        <h2 class="post-title">
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </h1>
+        </h2>
       </div>
     
     </span>

@@ -8,7 +8,7 @@ layout: default
 <article>
   <div class="post -fixed -first">
     <div class="post-header container-principal">
-      <h1 class="post-title">{{ page.title }}</h1>
+      <h2 class="post-title">{{ page.title }}</h2>
     </div>
 
     {% picture  {{ site.baseurl }}{{ site.assets }}/posts/{{page.image}}.jpg --img class="post-image" --img alt="{{page.image}}" loading="lazy" style="z-index: {{ lengthID | minus: forloop.index }}" %}

@@ -1,17 +1,17 @@
 <div class="footer" id="js-footer">
     <div class="container-total">
-<h6>Ir para a página <br>
+<h6>Ir para a página <br></h6>
 
     {% if paginator.page_trail %}
    {% for trail in paginator.page_trail %}
-
+<menu>
 <li class="trail-navigation{% if page.url == trail.path %} selected{% endif %}">
 <a href="{{ trail.path | prepend: site.baseurl }}" class="{% if page.url == entry.url %} navigation-text {% endif %}" title="{{trail.title}}">{{ trail.num }}</a>
 </li>
 {% endfor %}
 {% endif %}
+</menu>
 
-</h6>
        <h6 class="footer-text">
         <a href=" https://nunogand.com">nunogand</a> |   
         © {{ site.time | date: '%Y' }} No rights reserved.</h6>

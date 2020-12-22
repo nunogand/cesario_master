@@ -7,6 +7,9 @@
   h6{
     font-style: normal;
   }
+  menu{
+    display: inline;
+  }
 
   & p {
     font-family: $sans;
@@ -49,7 +52,7 @@
   font-family: $sans;
   font-style: normal;
   font-weight: $sans-normal;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   color: palette(gray);
 
@@ -71,6 +74,7 @@
 @media (min-width: $tablet) {
   .footer {
     max-width: 50vw;
+    text-align: center
   }
 }
 
