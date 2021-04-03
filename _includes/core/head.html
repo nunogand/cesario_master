@@ -19,7 +19,9 @@
 <title>
     {% if page.title %} {{ site.title }} · {{ page.title }} {% else %} {{ site.title }} {% endif %}
   </title>
-
+  
+  <!-- preload JS-->
+   <link rel="preload" as="script" href="/assets/scripts.js">
   <!-- CSS Fonts (colocar igual ao css)-->
   
 <!-- [1 Preemptively warm up the fonts’ origin] -->
