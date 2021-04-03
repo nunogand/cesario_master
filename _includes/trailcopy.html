@@ -4,12 +4,13 @@
 
     {% if paginator.page_trail %}
    {% for trail in paginator.page_trail %}
-<menu>
+<menu><ul>
 <li class="trail-navigation{% if page.url == trail.path %} selected{% endif %}">
 <a href="{{ trail.path | prepend: site.baseurl }}" class="{% if page.url == entry.url %} navigation-text {% endif %}" title="{{trail.title}}">{{ trail.num }}</a>
 </li>
 {% endfor %}
 {% endif %}
+    </ul>    
 </menu>
 
        <h6 class="footer-text">
