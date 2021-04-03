@@ -1,10 +1,10 @@
 <div class="footer" id="js-footer">
     <div class="container-total">
 <h6>Ir para a página <br></h6>
-
+<menu><ul>
     {% if paginator.page_trail %}
    {% for trail in paginator.page_trail %}
-<menu><ul>
+
 <li class="trail-navigation{% if page.url == trail.path %} selected{% endif %}">
 <a href="{{ trail.path | prepend: site.baseurl }}" class="{% if page.url == entry.url %} navigation-text {% endif %}" title="{{trail.title}}">{{ trail.num }}</a>
 </li>
