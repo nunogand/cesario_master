@@ -16,9 +16,9 @@
   {% endunless %}
   {% endfor %}
 
-<!--  <title>
-    {% if page.title %} {{ page.title }} · {{ site.title }} {% else %} {{ site.title }} · {{ site.tagline }} {% endif %}
-  </title> -->
+<title>
+    {% if page.title %} {{ site.title }} · {{ page.title }} {% else %} {{ site.title }} {% endif %}
+  </title>
 
   <!-- CSS Fonts (colocar igual ao css)-->
   
@@ -46,5 +46,5 @@
   {% feed_meta %} 
 
   <!-- Jekyll seo -->
-  {% seo %}
+  {% seo title=false %}
 </head>
