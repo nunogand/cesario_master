@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.2"
-gem "libv8", "3.16.14.15"
+#gem "jekyll", "~> 4.2.2"
+#gem "libv8", "3.16.14.15"
 gem "therubyracer"
 
 # If you have any plugins, put them here!
