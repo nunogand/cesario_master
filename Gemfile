@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.1.1"
+gem "jekyll", "~> 4.2.2"
 gem "therubyracer"
 
 # If you have any plugins, put them here!
